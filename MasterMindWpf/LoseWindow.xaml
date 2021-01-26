@@ -1,0 +1,25 @@
+﻿<Window x:Class="MasterMindWpf.LoseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MasterMindWpf"
+        mc:Ignorable="d"
+        Title="LoseWindow" Height="300" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="youLose.png" Width="300" Height="150" VerticalAlignment="Top" Margin="46,0" Grid.ColumnSpan="2"/>
+      
+        <Canvas x:Name="SearchedColoursCanvas" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="100" 
+                FontSize="14" FontWeight="Bold" Click="OkButton_Click" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
