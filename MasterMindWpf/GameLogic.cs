@@ -16,6 +16,7 @@ namespace MasterMindWpf
         public Brush SelectedColour { get; set; }
 
         public int Attempt { get; set; }
+        public bool IsEnableStart { get; set; }
 
         public List<Brush> SearchedColours { get; set; }
 
@@ -28,12 +29,13 @@ namespace MasterMindWpf
         {
             random = new Random();
             SelectedColour = Brushes.White;
+            IsEnableStart = false;
         }
+
         /// <summary>
-        /// Vygeneruje hledané barvy
+        /// Vygeneruje elipsy s hledanými barvami
         /// </summary>
         /// <param name="_numberOfSearchedColours"></param>
-        
         public void NewGame(int _numberOfSearchedColours)
         {
             Attempt = 0;
@@ -48,6 +50,7 @@ namespace MasterMindWpf
             previousPlayersTips = new List<Brush>();
             correctColoursOrPositions = new List<Brush>();
         }
+
         /// <summary>
         /// Vygeneruje elipsy
         /// </summary>
@@ -56,6 +59,7 @@ namespace MasterMindWpf
         /// <param name="numberOfRows"></param>
         public void GenerateEllipses(Canvas canvas, Brush brush, int numberOfRows)
         {
+            canvas.Children.Clear();
             for (int y = 0; y < numberOfRows ; y++)
             {
                 for (int i = 0; i < SearchedColours.Count; i++)
@@ -74,6 +78,7 @@ namespace MasterMindWpf
                 }
             }
         }
+
         /// <summary>
         /// Přidá elipsám vlastnost "kliknutí"
         /// </summary>
@@ -109,8 +114,9 @@ namespace MasterMindWpf
                 ((Ellipse)ellipse).Fill = previousPlayersTips[y++];
             }
         }
+
         /// <summary>
-        /// Vygeneruje a obarvy elipsy, které ukazují správnou pozici nebo barvu
+        /// Vygeneruje a obarví elipsy, které ukazují správnou pozici nebo barvu
         /// </summary>
         /// <param name="canvas"></param>
         public void GeneratePreviousTipEllipses(Canvas canvas)
@@ -141,6 +147,7 @@ namespace MasterMindWpf
                 ((Ellipse)ellipse).Fill = correctColoursOrPositions[ii++];
             }
         }
+
         /// <summary>
         /// Porovnávání hráčova typu s hledanými barvami
         /// </summary>

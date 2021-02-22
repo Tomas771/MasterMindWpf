@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterMindWpf"
         mc:Ignorable="d"
-        Title="Scoreboard" Height="450" Width="400" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Scoreboard" Height="450" Width="400" WindowStartupLocation="CenterScreen" Icon="Icons\light-bulb.png">
+    <Grid Background="SandyBrown">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
@@ -14,13 +14,13 @@
         </Grid.RowDefinitions>
 
         <Label Content="SCOREBOARD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"/>
-        <DataGrid Grid.Row="1" Margin="10" ItemsSource="{Binding Players}"  AutoGenerateColumns="False"  CanUserReorderColumns="False" IsEnabled="False">
-            <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="*"/>
-                    <DataGridTextColumn Binding="{Binding Attempts}" Header="Attempts" Width="*"/>
+        <DataGrid Grid.Row="1" Margin="10" ItemsSource="{Binding Players}"  AutoGenerateColumns="False"  CanUserReorderColumns="False" IsEnabled="False" Background="SaddleBrown">
+            <DataGrid.Columns >
+                <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="*" />
+                    <DataGridTextColumn Binding="{Binding Attempts}" Header="Score" Width="*"/>
                     <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Row="2" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" FontSize="14" FontWeight="Bold" Click="Button_Click" />
+        <Button Grid.Row="2" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="14" FontWeight="Bold" Click="Button_Click" />
     </Grid>
 </Window>

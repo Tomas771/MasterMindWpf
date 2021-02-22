@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterMindWpf"
         mc:Ignorable="d"
-        Title="LoseWindow" Height="300" Width="400" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="LoseWindow" Height="300" Width="400" WindowStartupLocation="CenterScreen" Icon="Icons\light-bulb.png">
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="4*"/>
@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="youLose.png" Width="300" Height="150" VerticalAlignment="Top" Margin="46,0" Grid.ColumnSpan="2"/>
+        <Image Source="Images\youLose.png" Width="300" Height="150" VerticalAlignment="Top" Margin="46,0" Grid.ColumnSpan="2"/>
       
         <Canvas x:Name="SearchedColoursCanvas" Grid.Row="1" Grid.Column="1"/>
         <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="100" 

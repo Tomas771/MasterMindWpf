@@ -75,13 +75,13 @@
     </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="PlayerAdministrator.cs" />
-    <Compile Include="Scoreboard.xaml.cs">
-      <DependentUpon>Scoreboard.xaml</DependentUpon>
+    <Compile Include="ScoreboardWindow.xaml.cs">
+      <DependentUpon>ScoreboardWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinWindow.xaml.cs">
       <DependentUpon>WinWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Difficulty.xaml">
+    <Page Include="DifficultyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,16 +97,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Colours.cs" />
-    <Compile Include="Difficulty.xaml.cs">
-      <DependentUpon>Difficulty.xaml</DependentUpon>
+    <Compile Include="Enums\Colours.cs" />
+    <Compile Include="DifficultyWindow.xaml.cs">
+      <DependentUpon>DifficultyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GameLogic.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Scoreboard.xaml">
+    <Page Include="ScoreboardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Button.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,13 +146,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="youLose.png" />
+    <Resource Include="Images\youLose.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="youWin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon.png" />
+    <Resource Include="Images\youWin.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -161,6 +162,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\light-bulb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterMindWpf"
         mc:Ignorable="d"
-        Title="Difficulty" Height="300" Width="300" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Difficulty" Height="300" Width="300" WindowStartupLocation="CenterScreen" Icon="Icons\light-bulb.png">
+    <Grid Background="SandyBrown">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
@@ -15,7 +15,7 @@
 
         <Label Content="SELECT DIFFICULTY" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>
         <StackPanel Grid.Row="1" VerticalAlignment="Top" Orientation="Horizontal" Margin="20">
-            <Label Content="Number of searched colours:" FontWeight="Bold" FontSize="14"/>
+            <Label Content="You have to find:" FontWeight="Bold" FontSize="14"/>
             <Label Name="SliderLabel" Grid.Column="0" Content="{Binding ElementName=DifficultySlider, Path=Value}" FontWeight="Bold" FontSize="14" />
         </StackPanel>
         <Slider x:Name="DifficultySlider" Grid.Row="1" VerticalAlignment="Center" Minimum="2" Maximum="4" TickFrequency="2" Value="1" Height="40" 

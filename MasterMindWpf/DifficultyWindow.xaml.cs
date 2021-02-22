@@ -33,6 +33,7 @@ namespace MasterMindWpf
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             gameLogic.NewGame((int)SliderLabel.Content);
+            gameLogic.IsEnableStart = true;
             this.Close();
         }
 
