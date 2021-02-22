@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterMindWpf"
         mc:Ignorable="d"
-        Title="MasterMind" Height="550" Width="500" MinHeight="800" MinWidth="500" WindowStartupLocation="CenterScreen" Icon="Icon.png">
+        Title="MasterMind" Height="550" Width="500" MinHeight="800" MinWidth="500" WindowStartupLocation="CenterScreen" Icon="Icons\light-bulb.png">
+
     <Grid Background="SandyBrown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -20,9 +21,9 @@
         </Grid.RowDefinitions>
         <Grid Margin="5 5 5 0" Background="SaddleBrown" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                <Button x:Name="NewGameButton" Content="New Game" Width="100" Margin="5" Click="NewGameButton_Click"/>
-                <Button x:Name="ScoreBoardButton" Content="ScoreBoard" Width="100" Margin="5" Click="ScoreBoardButton_Click"/>
-                <Button x:Name="EndButton" Content="End" Width="100" Margin="5" Click="EndButton_Click"/>
+                <Button x:Name="NewGameButton"   Content="NEW GAME"  Margin="5" Click="NewGameButton_Click" />
+                <Button x:Name="ScoreBoardButton" Content="SCOREBOARD"  Margin="5" Click="ScoreBoardButton_Click"/>
+                <Button x:Name="EndButton" Content="END"  Margin="5" Click="EndButton_Click" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1"  Background="SaddleBrown" Margin="5 0 0 5"/>
@@ -58,7 +59,7 @@
             </StackPanel>
         </Grid>
 
-        <Button x:Name="TipButton" Content="Tip" Width="100" Grid.Row="4" Grid.ColumnSpan="2"  Margin="8" Click="TipButton_Click" IsEnabled="False"/>
+        <Button x:Name="TipButton" Content="TIP" Width="100" Grid.Row="4" Grid.ColumnSpan="2"  Margin="8" Click="TipButton_Click" Visibility="Collapsed"/>
 
     </Grid>
 </Window>

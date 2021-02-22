@@ -33,11 +33,14 @@ namespace MasterMindWpf
         {
             var difficultyWindow = new Difficulty(gameLogic);
             difficultyWindow.ShowDialog();
-            gameLogic.GenerateEllipses(SearchedColoursCanvas, Brushes.Gray, 1);
-            gameLogic.GenerateTipEllipses(TipColoursCanvas);
-            gameLogic.GeneratePreviousPlayerTipEllipses(PreviousTipPlayerCanvas);
-            gameLogic.GeneratePreviousTipEllipses(PreviousTipCanvas);
-            TipButton.IsEnabled = true;
+            if(gameLogic.IsEnableStart)
+            {
+                gameLogic.GenerateEllipses(SearchedColoursCanvas, Brushes.Gray, 1);
+                gameLogic.GenerateTipEllipses(TipColoursCanvas);
+                gameLogic.GeneratePreviousPlayerTipEllipses(PreviousTipPlayerCanvas);
+                gameLogic.GeneratePreviousTipEllipses(PreviousTipCanvas);
+                TipButton.Visibility = Visibility.Visible;
+            }
         }
 
         private void ScoreBoardButton_Click(object sender, RoutedEventArgs e)
